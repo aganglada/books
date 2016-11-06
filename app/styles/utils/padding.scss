@@ -1,0 +1,45 @@
+$position: bottom, left, right, top;
+
+.u-padding--zero {
+    padding: 0;
+}
+
+.u-padding {
+    padding: $gutter;
+}
+
+.u-padding-top {
+    padding-top: $gutter;
+}
+
+.u-padding-right {
+    padding-right: $gutter;
+}
+
+.u-padding-left {
+    padding-left: $gutter;
+}
+
+.u-padding-bottom {
+    padding-bottom: $gutter;
+}
+
+@each $i in $sizeModifiers {
+    .u-padding--#{$i}{
+        padding: map-get($sizeList, $i);
+    }
+
+    .u-padding--zero-#{$i}{
+        padding: 0 map-get($sizeList, $i);
+    }
+
+    .u-padding--#{$i}-zero{
+        padding: map-get($sizeList, $i) 0;
+    }
+
+    @each $j in $position {
+        .u-padding-#{$j}--#{$i}{
+            padding-#{$j}: map-get($sizeList, $i);
+        }
+    }
+}

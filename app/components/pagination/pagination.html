@@ -1,0 +1,45 @@
+<ul>
+    <li class="u-display--inline-block">
+        <button
+            ng-click="$ctrl.onPaginate(1)"
+            type="button"
+            class="e-button"
+            ng-disabled="$ctrl.page === 1"
+        >first</button>
+    </li>
+    <li class="u-display--inline-block">
+        <li class="u-display--inline-block">
+        <button
+            ng-click="$ctrl.onPaginate($ctrl.page - 1)"
+            type="button"
+            class="e-button"
+            ng-disabled="$ctrl.page === 1"
+        >prev</button>
+    </li>
+    </li>
+    <li class="u-display--inline-block" ng-repeat="page in [] | range:$ctrl.pages">
+        <button
+            ng-click="$ctrl.onPaginate(page)"
+            type="button"
+            class="e-button"
+            ng-disabled="$ctrl.page === page"
+            ng-class="{ 'u-font-weight--bold': $ctrl.page === page }"
+        >{{ page }}</button>
+    </li>
+    <li class="u-display--inline-block">
+        <button
+            ng-click="$ctrl.onPaginate($ctrl.page + 1)"
+            type="button"
+            class="e-button"
+            ng-disabled="$ctrl.page === $ctrl.pages"
+        >next</button>
+    </li>
+    <li class="u-display--inline-block">
+        <button
+            ng-click="$ctrl.onPaginate($ctrl.pages)"
+            type="button"
+            class="e-button"
+            ng-disabled="$ctrl.page === $ctrl.pages"
+        >last</button>
+    </li>
+</ul>

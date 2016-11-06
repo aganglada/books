@@ -1,0 +1,35 @@
+<article class="c-book">
+    <a class="c-book__anchor" ui-sref="book({ id: $ctrl.id })">
+        <header class="c-book__cover c-book__cover--small">
+            <img class="c-book__cover-img" ng-src="{{ $ctrl.book.cover }}" alt="{{ $ctrl.book.name }}">
+            <h3 class="c-book__cover-title">{{ $ctrl.book.name }}</h3>
+        </header>
+        <section class="u-padding">
+            <section class="c-book__author">
+                <img class="c-book__author-img" ng-src="{{ $ctrl.book.author.avatar }}" alt="{{ $ctrl.book.author.name }}">
+                <p class="u-font-color--04-lighter">
+                    <c-loading-placeholder
+                        text="$ctrl.book.author.name"
+                    ></c-loading-placeholder>
+                    <small class="u-display--block">
+                        {{ $ctrl.book.published }}
+                    </small>
+                </p>
+            </section>
+            <p class="u-font-color--04-lighter">
+                <c-loading-placeholder
+                    text="$ctrl.book.description"
+                ></c-loading-placeholder>
+            </p>
+        </section>
+    </a>
+    <footer class="u-background--04-lightest">
+        <button type="button" class="e-button" ng-click="$ctrl.bookService.likeBook($ctrl)">
+            <i class="i-svg i-svg-20" ng-class="{
+                'i-svg__like': !$ctrl.book.liked,
+                'i-svg__like--filled': $ctrl.book.liked
+            }"></i>
+            <small>{{ $ctrl.book.likes }}</small>
+        </button>
+    </footer>
+</article>

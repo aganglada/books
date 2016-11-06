@@ -1,0 +1,18 @@
+<main class="u-max-width--960 u-margin--zero-auto">
+    <article class="row u-align--container-center">
+        <c-book
+            class="col-lg-4 col-md-4 col-sm-6 col-xs-12"
+            ng-repeat="book in $ctrl.books track by $index"
+            book="book"
+            id="book.id"
+            onLike="$ctrl.onBookLiked"
+        ></c-book>
+    </article>
+    <nav class="u-text-align--center">
+        <c-pagination
+            pages="$ctrl.pagination.pages"
+            page="$ctrl.pagination.page"
+            on-paginate="$ctrl.onPaginate"
+        ></c-pagination>
+    </nav>
+</main>

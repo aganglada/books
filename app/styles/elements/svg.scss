@@ -1,0 +1,28 @@
+$svg-path: '../app/resources/svg/';
+
+.i-svg {
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.i-svg-20 {
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
+}
+
+.i-svg__arrow-down {
+  background-image: url($svg-path + 'icn_arrow_down_dark.svg');
+}
+
+.i-svg__arrow-left {
+  background-image: url($svg-path + 'icn_arrow_left_dark.svg');
+}
+
+.i-svg__like {
+  background-image: url($svg-path + 'icn_like.svg');
+}
+
+.i-svg__like--filled {
+  background-image: url($svg-path + 'icn_like_filled.svg');
+}

@@ -1,0 +1,11 @@
+.u-font-size--regular {
+    @include rem(font-size, $font-size-xs);
+}
+
+.u-font-size--small {
+    @include rem(font-size, $font-size-xxs);
+}
+
+.u-font-size--xsmall {
+    @include rem(font-size, $font-size-3xs);
+}

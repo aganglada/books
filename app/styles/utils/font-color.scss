@@ -1,0 +1,23 @@
+$types: 5;
+
+.u-font-color--white {
+    color: $white;
+}
+
+.u-font-color--black {
+    color: $black;
+}
+
+@while $types > 0 {
+    .u-font-color--0#{$types} {
+        color: map-get($colorList, _0#{$types});
+    }
+
+    @each $i in $colorTypes {
+        .u-font-color--0#{$types}-#{$i}{
+            color: map-get($colorList, _0#{$types}-#{$i});
+        }
+    }
+
+    $types: $types - 1;
+}

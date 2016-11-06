@@ -1,0 +1,11 @@
+{
+  "use": ["autoprefixer", "postcss-url"],
+  "autoprefixer": {
+    "browsers": ["ie 11", "last 2 versions"]
+  },
+  "postcss-url": {
+    "url": "inline",
+    "maxSize": 20,
+    "basePath": "."
+  }
+}

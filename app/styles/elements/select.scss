@@ -1,0 +1,35 @@
+.e-select {
+  background-repeat: no-repeat;
+  background-position: right 3px top 50%;
+  background-size: 24px 24px;
+  background-color: white;
+  padding: 10px 30px 10px 8px;
+  border: 1px solid $maincolor-04-lighter;
+  border-radius: 0;
+  box-sizing: border-box;
+  text-indent: 0.01px;
+  line-height: normal;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-overflow: '';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &:focus {
+    border: 1px solid $maincolor-04;
+  }
+
+  &:disabled {
+    background-color: transparent;
+    cursor: not-allowed;
+  }
+}
+
+.e-select--no-border {
+  border: 0;
+
+  &:focus {
+    border: 0;
+  }
+}

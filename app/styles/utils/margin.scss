@@ -1,0 +1,45 @@
+$position: bottom, left, right, top;
+
+.u-margin--zero {
+    margin: 0;
+}
+
+.u-margin {
+    margin: $gutter;
+}
+
+.u-margin-top {
+    margin-top: $gutter;
+}
+
+.u-margin-right {
+    margin-right: $gutter;
+}
+
+.u-margin-left {
+    margin-left: $gutter;
+}
+
+.u-margin-bottom {
+    margin-bottom: $gutter;
+}
+
+@each $i in $sizeModifiers {
+    .u-margin--#{$i}{
+        margin: map-get($sizeList, $i);
+    }
+
+    .u-margin--zero-#{$i}{
+        margin: 0 map-get($sizeList, $i);
+    }
+
+    .u-margin--#{$i}-zero{
+        margin: map-get($sizeList, $i) 0;
+    }
+
+    @each $j in $position {
+        .u-margin-#{$j}--#{$i}{
+            margin-#{$j}: map-get($sizeList, $i);
+        }
+    }
+}

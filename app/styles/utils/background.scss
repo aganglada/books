@@ -1,0 +1,19 @@
+$types: 5;
+
+.u-background--white {
+    background: $white;
+}
+
+@while $types > 0 {
+    .u-background--0#{$types} {
+        color: map-get($colorList, _0#{$types});
+    }
+
+    @each $i in $colorTypes {
+        .u-background--0#{$types}-#{$i}{
+            background: map-get($colorList, _0#{$types}-#{$i});
+        }
+    }
+
+    $types: $types - 1;
+}
