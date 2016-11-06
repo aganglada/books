@@ -1,0 +1,209 @@
+/*
+ * Global variables
+ */
+
+/*
+ * # Fonts
+ */
+
+// font declaration
+//
+// $font-smoothing:     - antialiased
+// $line-height-small:  - 1.25
+// $line-height-big:    - 1.5
+// $font-size-base:     - 100%
+// $font-size-3xs:      - 12px
+// $font-size-xxs:      - 14px
+// $font-size-xs:       - 16px
+// $font-size-s:        - 20px
+// $font-size-m:        - 24px
+// $font-size-l:        - 32px
+// $font-size-xl:       - 44px
+// $font-size-xxl:      - 56px
+// $font-size-3xl:      - 68px
+// $font-size-4xl:      - 80px
+// $font-family:        - Arial, Helvetica, Sans, Sans-Serif, "Sans Serif"
+//
+// Styleguide settings.font
+
+/*
+ * ## Font Smoothing
+ */
+$font-smoothing: antialiased !default;
+
+/*
+ * ## Line-heights
+ */
+$line-height-small: 1.25 !default;
+$line-height-big: 1.5 !default;
+
+/*
+ * ## Basic Font Sizes
+ */
+$font-size-base: 100% !default;
+$font-size-3xs: 12px !default;
+$font-size-xxs: 14px !default;
+$font-size-xs: 16px !default;
+$font-size-s: 20px !default;
+$font-size-m: 24px !default;
+$font-size-l: 32px !default;
+$font-size-xl: 44px !default;
+$font-size-xxl: 56px !default;
+$font-size-3xl: 68px !default;
+$font-size-4xl: 80px !default;
+
+/**
+* ### special button font size
+*/
+$font-size-4xs: 11px !default;
+
+/*
+ * ## Font Family
+ */
+$font-family: Arial, Helvetica, Sans, Sans-Serif, "Sans Serif" !default;
+
+/*
+ * ## Heading presets
+ */
+
+// heading presets
+//
+// $headings-font-family:       - inherit
+// $headings-font-weight:       - bold
+// $headings-line-height:       - $line-height-small
+// $headings-color:             - inherit
+//
+// Styleguide settings.headings
+
+$headings-font-family: inherit !default;
+$headings-font-weight: bold !default;
+$headings-line-height: $line-height-small !default;
+$headings-color: inherit !default;
+
+/*
+ * # Gutter - Basic Spacing
+ */
+
+// spacing
+//
+// $gutter:                         - 16px
+// $gutter-doubled:                 - ($gutter * 2)
+// $gutter-one-plus-half:           - ($gutter * 1.5)
+// $gutter-half:                    - ($gutter / 2)
+// $gutter-three-eighths:           - (($gutter / 8) * 3)
+// $gutter-quarter:                 - ($gutter / 4)
+// $gutter-eighth:                  - ($gutter / 8)
+//
+// Styleguide settings.spacing
+
+$gutter: 16px !default;
+$gutter-doubled: ($gutter * 2) !default; // 32px
+$gutter-one-plus-half: ($gutter * 1.5) !default; // 24px
+$gutter-three-quarters: (($gutter / 4) * 3) !default; // 12px
+$gutter-half: ($gutter / 2) !default; // 8px
+$gutter-three-eighths: (($gutter / 8) * 3) !default; // 6px
+$gutter-quarter: ($gutter / 4) !default; // 4px
+$gutter-eighth: ($gutter / 8) !default; // 2px
+
+/*
+ * # Text Direction
+ */
+$text-direction: ltr !default;
+
+/*
+ * # Border
+ */
+
+// border
+//
+// $border-color:                   - $maincolor-04-very-light
+// $border-radius:                  - 2px
+//
+// Styleguide settings.border
+
+$border-color: $maincolor-04-very-light !default;
+$border-radius: 2px !default;
+
+
+// opacity
+//
+// $opacity-low:                    - .25
+// $opacity-half:                   - .5
+// $opacity-medium:                 - .75
+// $opacity-high:                   - .9
+// $opacity-full:                   - 1
+//
+// Styleguide settings.opacity
+
+$opacity-low: .25 !default;
+$opacity-half: .5 !default;
+$opacity-medium: .75 !default;
+$opacity-high: .90 !default;
+$opacity-full: 1 !default;
+
+// box-shadow
+//
+// $box-shadow:                     - 0 1px 4px rgba(40, 51, 56, $opacity-half)
+//
+// Styleguide settings.box-shadow
+
+/* # Box shadows */
+$box-shadow: 0 1px 4px rgba(41, 51, 57, $opacity-half) !default;
+$box-shadow-02: $box-shadow !default;
+
+/*
+ * # Horizontal ruler
+ */
+$hr-height: 1px !default;
+
+/*
+ * # Media Queries
+ */
+
+$min-phone-width: 320px !default;
+
+/*
+ * ## Media query breakpoints
+ * ## Media Query Screen and Orientation
+ */
+
+// media-query
+//
+// $screen-small:                   - 664px
+// $screen-medium:                  - 816px
+// $screen-large:                   - 1280px
+// $screen-extralarge:              - 1312px
+// $screen-phone:                   - 320px
+// $screen-phone-wide:              - 360px
+// $screen-phablet:                 - 412px
+// $screen-tablet:                  - 480px
+// $screen-tablet-wide:             - 600px
+// $screen-tablet-wider:            - 720px
+// $screen:                         - "only screen"
+// $landscape:                      - "#{$screen} and (orientation: landscape)"
+// $portrait:                       - "#{$screen} and (orientation: portrait)"
+//
+// Styleguide settings.media-query
+
+$screen-small: 664px !default;
+$screen-medium: 816px !default;
+$screen-large: 1280px !default;
+$screen-extralarge: 1312px !default;
+$screen-phone: 320px !default;
+$screen-phone-wide: 360px !default; // apparently still in use
+$screen-phablet: 412px !default;
+$screen-tablet: 480px !default;
+$screen-tablet-wide: 600px !default;
+$screen-tablet-wider: 720px !default;
+$screen: "only screen" !default;
+$landscape: "#{$screen} and (orientation: landscape)" !default;
+$portrait: "#{$screen} and (orientation: portrait)" !default;
+
+/*
+ * # Component Specific Settings
+ */
+$centerwrapper-width: ($min-phone-width * 2) + $gutter !default;
+$centerwrapper-narrower-width: $min-phone-width !default;
+
+$item-width: 816px !default;
+$centerwrapper--item-width: 1082px !default;

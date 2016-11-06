@@ -1,0 +1,77 @@
+/**
+ * @see https://github.com/jamiewilson/corpus/blob/master/_animation.scss
+ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to   {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to   {
+        display: none;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(1.5rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-1.5rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-25vh);
+    }
+
+    to   {
+        transform: translateY(0);
+    }
+}
+
+.u-animation--fade-in {
+    animation: fadeIn 500ms;
+}
+
+.u-animation--fade-out {
+    animation: fadeOut 500ms;
+}
+
+.u-animation--fade-in-up {
+    animation: fadeInUp 500ms;
+}
+
+.u-animation--fade-in-down {
+    animation: fadeInDown 500ms;
+}
+
+.u-animation--slide-down {
+    animation: slideDown 200ms ease-in-out;
+}

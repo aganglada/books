@@ -1,0 +1,16 @@
+$values: block, inline-block, inline, table, table-cell;
+
+.u-display--none {
+    display: none;
+}
+
+.u-display--inline-block-reset {
+    display: inline-block;
+    margin-right: -4px;
+}
+
+@each $i in $values {
+    .u-display--#{$i} {
+        display: $i;
+    }
+}

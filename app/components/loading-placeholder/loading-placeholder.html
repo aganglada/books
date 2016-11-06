@@ -1,0 +1,5 @@
+<span ng-class="{
+    'c-loading-placeholder': !$ctrl.text,
+    'c-loading-placeholder--small': !$ctrl.text && $ctrl.size === 's',
+    'c-loading-placeholder--medium': !$ctrl.text && $ctrl.size === 'm'
+}">{{ $ctrl.text }}</span>

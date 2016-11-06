@@ -1,0 +1,48 @@
+.c-book {
+  box-shadow: $box-shadow;
+  margin-bottom: $gutter;
+  background: white;
+  border-radius: $border-radius;
+}
+
+.c-book__anchor {
+  cursor: pointer;
+}
+
+.c-book__cover {
+  overflow: hidden;
+  height: 500px;
+  position: relative;
+  background-color: $maincolor-04-lightest;
+
+  &--small {
+    height: 200px;
+  }
+}
+
+.c-book__cover-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.c-book__cover-title {
+  background: rgba(0,0,0,.3);
+  padding: $gutter-half;
+  color: $white;
+  position: absolute;
+  top: 120px;
+}
+
+.c-book__author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.c-book__author-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: $gutter;
+  background-color: $maincolor-04-lightest;
+}

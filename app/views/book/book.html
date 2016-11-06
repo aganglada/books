@@ -1,0 +1,49 @@
+<main class="u-max-width--500 u-margin--zero-auto">
+    <nav class="u-margin-bottom">
+        <a ui-sref="library" class="e-button">
+            <i class="i-svg i-svg-20 i-svg__arrow-left"></i> Back to library
+        </a>
+    </nav>
+    <article class="c-book">
+        <header class="c-book__cover">
+            <img class="c-book__cover-img" ng-src="{{ $ctrl.book.cover }}" alt="{{ $ctrl.book.name }}">
+        </header>
+        <section class="u-padding">
+            <h3>
+                <c-loading-placeholder
+                    text="$ctrl.book.name"
+                ></c-loading-placeholder>
+            </h3>
+            <p class="u-font-color--04-lighter">
+                <c-loading-placeholder
+                    text="$ctrl.book.description"
+                ></c-loading-placeholder>
+            </p>
+            <section class="c-book__author">
+                <img class="c-book__author-img" ng-src="{{ $ctrl.book.author.avatar }}" alt="{{ $ctrl.book.author.name }}">
+                <p class="u-font-color--04-lighter">
+                    <c-loading-placeholder
+                        text="$ctrl.book.author.name"
+                    ></c-loading-placeholder>
+                    <small class="u-display--block">
+                        {{ $ctrl.book.published }}
+                    </small>
+                </p>
+            </section>
+            <p class="u-font-color--04-lighter">
+                <small>CATEGORY {{ $ctrl.book.genre.category }}, {{ $ctrl.book.genre.name }}</small>
+            </p>
+            <h5>Introduction</h5>
+            <p ng-repeat="paragraph in $ctrl.book.introduction">{{ paragraph.content }}</p>
+        </section>
+        <footer class="u-background--04-lightest">
+            <button type="button" class="e-button" ng-click="$ctrl.bookService.likeBook($ctrl)">
+                <i class="i-svg i-svg-20" ng-class="{
+                    'i-svg__like': !$ctrl.book.liked,
+                    'i-svg__like--filled': $ctrl.book.liked
+                }"></i>
+                <small>{{ $ctrl.book.likes }}</small>
+            </button>
+        </footer>
+    </article>
+</main>

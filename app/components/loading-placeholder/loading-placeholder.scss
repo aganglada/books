@@ -1,0 +1,16 @@
+.c-loading-placeholder {
+  background: $maincolor-04-lightest;
+  width: 100%;
+  height: 1em;
+  display: inline-block;
+
+  &--small {
+    width: 20%;
+  }
+
+  &--medium {
+    width: 20%;
+  }
+}
+
+
